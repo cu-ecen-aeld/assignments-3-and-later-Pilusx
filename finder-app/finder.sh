@@ -16,6 +16,6 @@ then
 fi
 
 X=$(find $FILESDIR -type f | wc -l)
-Y=$(cat $(find $FILESDIR -type f -print) | grep $SEARCHSTR | wc -l)
+Y=$(grep -r $SEARCHSTR $FILESDIR | wc -l)
 
 echo "The number of files are $X and the number of matching lines are $Y"
